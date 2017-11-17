@@ -4,8 +4,8 @@ require 'URI'
 
 WORD = ARGV[0]
 URL = URI.escape('https://ja.wikipedia.org/wiki/' + WORD)
-PATTERN = %r[\.jpg$|\.jpeg$|\.png$|\.gif$/\.bmp$|\.svg$|^/wiki/#.*$]
-Anemone.crawl(URL, depth_limit: 1) do |anemone|
+PATTERN = %r[\.jpg$|\.jpeg$|\.png$|\.gif$/\.bmp$|\.svg$|\/%23]
+Anemone.crawl(URL, depth_limit: 1, delay: 1) do |anemone|
     anemone.focus_crawl do |page|
         page.links.keep_if { |link|
             #wikiを含むURLのみ取得
