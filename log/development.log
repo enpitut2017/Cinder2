@@ -609,3 +609,108 @@ Completed 200 OK in 85ms (Views: 72.5ms | ActiveRecord: 1.5ms)
   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories" WHERE ("categories"."lft" <= 2) AND ("categories"."rgt" >= 3) AND ("categories"."id" != 2)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories" WHERE ("categories"."lft" <= 3) AND ("categories"."rgt" >= 4) AND ("categories"."id" != 4)[0m
   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."parent_id" = ? ORDER BY "categories"."lft" LIMIT ?[0m  [["parent_id", 2], ["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2017-11-17 16:21:34 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 17ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-17 16:33:20 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 14ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/index" for 127.0.0.1 at 2017-11-17 16:33:30 +0900
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:7: dynamic constant assignment
+    WORD = ARGV[0]
+          ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:8: dynamic constant assignment
+    URL = URI.escape('https://ja.wikipe
+         ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:9: dynamic constant assignment
+    PATTERN = %r[\.jpg$|\.jpeg$|\.png$|\.gi
+             ^):
+  
+app/controllers/categories_controller.rb:7: dynamic constant assignment
+app/controllers/categories_controller.rb:8: dynamic constant assignment
+app/controllers/categories_controller.rb:9: dynamic constant assignment
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:33:34 +0900
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:7: dynamic constant assignment
+    WORD = ARGV[0]
+          ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:8: dynamic constant assignment
+    URL = URI.escape('https://ja.wikipe
+         ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:9: dynamic constant assignment
+    PATTERN = %r[\.jpg$|\.jpeg$|\.png$|\.gi
+             ^):
+  
+app/controllers/categories_controller.rb:7: dynamic constant assignment
+app/controllers/categories_controller.rb:8: dynamic constant assignment
+app/controllers/categories_controller.rb:9: dynamic constant assignment
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:34:57 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:83:in `set_category'
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:36:00 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:84:in `set_category'
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:38:55 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 22ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:83:in `set_category'
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:42:13 +0900
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:83:in `set_category'
+Started GET "/categories/index/" for 127.0.0.1 at 2017-11-17 16:43:22 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
+  
+app/controllers/categories_controller.rb:84:in `set_category'

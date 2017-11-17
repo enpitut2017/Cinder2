@@ -14,6 +14,6 @@ Anemone.crawl(URL, depth_limit: 1, delay: 1) do |anemone|
     end
     anemone.skip_links_like PATTERN
     anemone.on_every_page do |page|
-        puts URI.unescape(page.url.request_uri)
+        puts URI.unescape(page.url.request_uri[6..-1])
     end
 end
