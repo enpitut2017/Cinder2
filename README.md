@@ -1,24 +1,5 @@
-# README
+#One-Minute Mapping(kari)
+ブレインストーミングにおけるマインドマップの作成を支援します。
+ユーザの入力したキーワードから、wikipediaのリンクを辿って関連の有りそうな単語を提示し、ユーザは気に入った単語をクリックするといった簡単なクリック操作だけでマインドマップを作り上げてしまいます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
