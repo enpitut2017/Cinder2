@@ -11,6 +11,17 @@
   </thead>
 
   <tbody>
+
+  <%= form_for @input do |f| %>
+    <div class="field">
+        <%= f.label :name, "検索語句を入力" %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div class="action" >
+        <%= f.submit "検索" %>
+    </div>
+  <% end %>
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
