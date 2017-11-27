@@ -714,3 +714,61 @@ Completed 404 Not Found in 13ms (ActiveRecord: 0.5ms)
 ActiveRecord::RecordNotFound (Couldn't find Category with 'id'=index):
   
 app/controllers/categories_controller.rb:84:in `set_category'
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:13:56 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 530ms (Views: 496.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:15:29 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 2255ms (Views: 2251.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:20:40 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1895ms (Views: 1892.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:44:42 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2262ms (Views: 2258.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:46:39 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:47:51 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-11-27 19:48:09 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 511ms (Views: 475.2ms | ActiveRecord: 0.8ms)
+
+
