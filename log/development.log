@@ -772,3 +772,959 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 511ms (Views: 475.2ms | ActiveRecord: 0.8ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_rgt' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_rgt' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_parent_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_parent_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_lft' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_lft' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-12-06 13:35:30 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-12-06 13:35:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/categories/index" for 127.0.0.1 at 2017-12-06 13:35:43 +0900
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2837ms (Views: 2823.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:36:24 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:45:40 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 209ms (Views: 190.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:45:50 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories?method=get&url=%2Fcategories%2Fsearch" for 127.0.0.1 at 2017-12-06 13:46:51 +0900
+Processing by CategoriesController#create as HTML
+  Parameters: {"keyword"=>"", "utf8"=>"✓", "authenticity_token"=>"V6UCyLcgxHwmFz0zzR+HHDptKNcnQkMxSyK+wtRJBEOqF2g4mhWEbp0/9mFOhGov66ZFxaGTioocf9Adu84Clg==", "method"=>"get", "url"=>"/categories/search"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: category):
+  
+app/controllers/categories_controller.rb:82:in `category_params'
+app/controllers/categories_controller.rb:29:in `create'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:51:12 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:52:06 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:53:21 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:53:44 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+ text_field :keyword, :class="form-control" );@output_buffer
+                              ^):
+  
+app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:54:11 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+t_field_tag :keyword, :class="form-control" );@output_buffer
+                              ^):
+  
+app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:55:54 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:9: syntax error, unexpected ':'
+t_field :category, :keyword, : :class="form-control" );@outp
+                              ^):
+  
+app/views/categories/index.html.erb:9: syntax error, unexpected ':'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:56:09 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+ :category, :keyword, :class="form-control" );@output_buffer
+                              ^):
+  
+app/views/categories/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:56:42 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:9: syntax error, unexpected '=', expecting ')'
+ :category, :keyword, :class = "form-control" );@output_buff
+                              ^):
+  
+app/views/categories/index.html.erb:9: syntax error, unexpected '=', expecting ')'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:58:17 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 194ms (Views: 191.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:59:00 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 13:59:40 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:01:16 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:01:48 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories?method=get&url=%2Fcategories%2Fsearch" for 127.0.0.1 at 2017-12-06 14:01:51 +0900
+Processing by CategoriesController#create as HTML
+  Parameters: {"keyword"=>{"{:class=>\"form-control\"}"=>""}, "commit"=>"検索", "utf8"=>"✓", "authenticity_token"=>"ge95AnNrLfo/2hwqqi/YMJiB1UuBZB6R2sNjo2sXM9R8XRPyXl5t6ITy13gptDUDSUq4WQe11yqNng18BJA1AQ==", "method"=>"get", "url"=>"/categories/search"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: category):
+  
+app/controllers/categories_controller.rb:82:in `category_params'
+app/controllers/categories_controller.rb:29:in `create'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:04:01 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered categories/index.html.erb within layouts/application (177.4ms)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `categories' for #<#<Class:0x007fc43d062468>:0x007fc43d308258>
+Did you mean?  @categories):
+    4: 
+    5: <table>
+    6:   <tbody>
+    7:       <%= form_tag controller: categories, action: search , :method => :get do %>
+    8:       	<div class="input-group">
+    9: 		    <%= text_field :keyword, class: "form-control" %>
+   10:       		<span class="input-group-btn">
+  
+app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___4183089965022830414_70240408454720'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:05:49 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting ')'
+earch'} , {:method => :get} do @output_buffer.safe_append='
+                              ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/views/categories/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/categories/index.html.erb:7: syntax error, unexpected keyword_do_block, expecting ')'
+app/views/categories/index.html.erb:21: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:07:36 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:07:53 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:08:43 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:10:48 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:12:04 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:13:06 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:13:57 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    4: 
+    5:       <%= form_tag(search_categories_path , {:method => :get}) do |f| %>
+    6:       	<div class="input-group">
+    7: 		    <%= f.text_field :keyword, {class: "form-control"} %>
+    8:       		<span class="input-group-btn">
+    9: 			    <%= submit_tag "検索", class: "btn btn-info"%>
+   10:       		</span>
+  
+app/views/categories/index.html.erb:7:in `block in _app_views_categories_index_html_erb___4183089965022830414_70240409063340'
+app/views/categories/index.html.erb:5:in `_app_views_categories_index_html_erb___4183089965022830414_70240409063340'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:14:33 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:16:15 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=a&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:16:21 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"a"}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:16:22 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>""}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:16:24 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>""}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:17:11 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>""}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:17:20 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>""}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:17:26 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>""}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.1ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=aiueo&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:17:30 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"aiueo"}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 22.8ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=aiueo&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:21:50 +0900
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:96: dynamic constant assignment
+      WORD = keyword
+            ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:97: dynamic constant assignment
+      URL = 'http://ja.dbpedia.org/resour
+           ^):
+  
+app/controllers/categories_controller.rb:96: dynamic constant assignment
+app/controllers/categories_controller.rb:97: dynamic constant assignment
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=aiueo&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:23:12 +0900
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:96: dynamic constant assignment
+      WORD = params[:category][:keyword]
+            ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:97: dynamic constant assignment
+      URL = 'http://ja.dbpedia.org/resour
+           ^):
+  
+app/controllers/categories_controller.rb:96: dynamic constant assignment
+app/controllers/categories_controller.rb:97: dynamic constant assignment
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=aiueo&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:24:42 +0900
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=aiueo&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:25:12 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categorie" for 127.0.0.1 at 2017-12-06 14:25:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/categorie"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:25:30 +0900
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:25:38 +0900
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:26:22 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:27:00 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 212ms (Views: 192.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:27:10 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `dbpadia_crawl' for #<CategoriesController:0x007fb9e857ad88>
+Did you mean?  dbpedia_crawl):
+  
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:27:41 +0900
+Processing by CategoriesController#index as HTML
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:27:51 +0900
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 58521ms
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:32:32 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- sparql/client):
+  
+app/controllers/categories_controller.rb:1:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:32:36 +0900
+  
+LoadError (cannot load such file -- sparql/client):
+  
+app/controllers/categories_controller.rb:1:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:34:35 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- sparql-client):
+  
+app/controllers/categories_controller.rb:1:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:34:58 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- anemone):
+  
+app/controllers/categories_controller.rb:2:in `<top (required)>'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:37:43 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 181ms (Views: 160.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:37:47 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 52778ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:128:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:125:in `each'
+app/controllers/categories_controller.rb:125:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:63:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:43:02 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 164ms (Views: 147.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:43:07 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 68682ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:128:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:125:in `each'
+app/controllers/categories_controller.rb:125:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:63:in `search'
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 14:46:30 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 185ms (Views: 163.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:46:38 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Completed   in 69621ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:48:26 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:49:19 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Started GET "/categories/s" for 127.0.0.1 at 2017-12-06 14:50:46 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"s"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 164ms (Views: 148.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:50:49 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:50:53 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:52:46 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 206ms (Views: 181.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:52:50 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 40707ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:128:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:125:in `each'
+app/controllers/categories_controller.rb:125:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:63:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:54:42 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- jason):
+  
+app/controllers/categories_controller.rb:6:in `<top (required)>'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:55:12 +0900
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 14:55:29 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 246ms (Views: 223.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 14:55:46 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69561ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 15:01:00 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 15:01:03 +0900
+Processing by CategoriesController#index as HTML
+Completed   in 13107ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 9866ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-06 15:01:21 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 199ms (Views: 178.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 15:01:24 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 26299ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 15:03:11 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:130: syntax error, unexpected ';', expecting ')'
+    html = open(request_url, ;redirect => false) do |f|
+                              ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:139: syntax error, unexpected keyword_end, expecting end-of-input
+    end
+       ^):
+  
+app/controllers/categories_controller.rb:130: syntax error, unexpected ';', expecting ')'
+app/controllers/categories_controller.rb:139: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 15:03:14 +0900
+  
+SyntaxError (/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:130: syntax error, unexpected ';', expecting ')'
+    html = open(request_url, ;redirect => false) do |f|
+                              ^
+/Users/takuya_shuto/work/enPiT/Cinder2/app/controllers/categories_controller.rb:139: syntax error, unexpected keyword_end, expecting end-of-input
+    end
+       ^):
+  
+app/controllers/categories_controller.rb:130: syntax error, unexpected ';', expecting ')'
+app/controllers/categories_controller.rb:139: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 15:04:06 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 173ms (Views: 156.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 15:04:12 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 68723ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-06 15:06:22 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 204ms (Views: 185.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-06 15:06:26 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 40147ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories/" for 127.0.0.1 at 2017-12-07 12:54:32 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 222ms (Views: 202.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-07 12:54:36 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 39398ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/categories" for 127.0.0.1 at 2017-12-07 12:57:28 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 203ms (Views: 184.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-07 12:57:32 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 80801ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E5%A4%A9%E7%8B%97&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-07 12:59:09 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"天狗"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 16366ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
+Started GET "/" for 127.0.0.1 at 2017-12-07 17:25:03 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/takuya_shuto/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2017-12-07 17:25:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2017-12-07 17:25:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/inde" for 127.0.0.1 at 2017-12-07 17:25:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/inde"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/categories" for 127.0.0.1 at 2017-12-07 17:25:18 +0900
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 288ms (Views: 270.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/search?utf8=%E2%9C%93&category%5Bkeyword%5D=%E3%82%8A%E3%82%93%E3%81%94&commit=%E6%A4%9C%E7%B4%A2" for 127.0.0.1 at 2017-12-07 17:25:21 +0900
+Processing by CategoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "category"=>{"keyword"=>"りんご"}, "commit"=>"検索"}
+Completed 500 Internal Server Error in 56386ms (ActiveRecord: 0.0ms)
+
+
+  
+OpenURI::HTTPError (400 ):
+  
+app/controllers/categories_controller.rb:130:in `block in dbpedia_crawl'
+app/controllers/categories_controller.rb:127:in `each'
+app/controllers/categories_controller.rb:127:in `dbpedia_crawl'
+app/controllers/categories_controller.rb:65:in `search'
