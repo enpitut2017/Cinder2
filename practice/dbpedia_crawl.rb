@@ -10,6 +10,7 @@ require 'uri'
 WORD = ARGV[0]
 URL = 'http://ja.dbpedia.org/resource/' + WORD
 client = SPARQL::Client.new("http://ja.dbpedia.org/sparql")
+a_token = ENV['a_token'] #アクセストークン
 
 redirect = client.query("
 SELECT *
@@ -39,7 +40,7 @@ end
 d = {}
 
 results.each do |solution|
-    request_URL = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token=4af25e9f-e0ac-46e8-b6da-f89590b8af29&word1=" + WORD + "&word2=" + solution[:thing2].to_s)
+    request_URL = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token=" + a_token + "&word1=" + WORD + "&word2=" + solution[:thing2].to_s)
     charset = nil
     html = open(request_URL, :redirect => false) do |f|
       charset = f.charset #文字種別を取得します。
@@ -51,9 +52,8 @@ results.each do |solution|
 end
 =begin
 results.each do |solution|
-  request_URL = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token=4af25e9f-e0ac-46e8-b6da-f89590b8af29&word1=" + WORD + "&word2=" + solution[:thing2].to_s)
+  request_URL = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token="+ a_token +"&word1=" + WORD + "&word2=" + solution[:thing2].to_s)
   request_URL = URI.parse(request_URL)
-  
   http = Net::HTTP.new(request_URL.host, request_URL.port)
   http.use_ssl = true
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE

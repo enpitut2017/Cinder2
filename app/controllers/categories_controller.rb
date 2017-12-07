@@ -96,6 +96,7 @@ class CategoriesController < ApplicationController
       word = params[:category][:keyword]
       url = 'http://ja.dbpedia.org/resource/' + word
       client = SPARQL::Client.new("http://ja.dbpedia.org/sparql")
+      a_token = ENV['a_token'] # 環境変数の取得
     
       redirect = client.query("
       SELECT *
@@ -123,9 +124,9 @@ class CategoriesController < ApplicationController
       end
     
       d = {}
-      # p "{"
+      
       results.each do |solution|
-          request_url = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token=4af25e9f-e0ac-46e8-b6da-f89590b8af29&word1=" + word + "&word2=" + solution[:thing2].to_s)
+          request_url = URI.escape("https://api.apitore.com/api/8/word2vec-neologd-jawiki/similarity?access_token="+ a_token +"&word1=" + word + "&word2=" + solution[:thing2].to_s)
           charset = nil
           html = open(request_url, :redirect => false) do |f|
             charset = f.charset #文字種別を取得します。
