@@ -1,4 +1,4 @@
-require "sparql/client"
+require 'sparql/client'
 require 'open-uri'
 require 'anemone'
 require 'nokogiri'
